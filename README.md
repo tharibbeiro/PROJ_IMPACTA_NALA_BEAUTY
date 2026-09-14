@@ -1,4 +1,4 @@
-# Nala Beauty BI
+# 💅 Nala Beauty - Projeto Acadêmico
 
 Projeto de faculdade de dados/BI: e-commerce fictício de maquiagem e produtos
 de beleza, com 3 camadas — banco de dados, back-end e front-end.
