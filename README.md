@@ -25,9 +25,7 @@ data/
 dashboard/
 ├── BI.pbix                   -- dashboard Power BI
 └── logo_nala_beauty.png
-docs/
-└── roteiro_video.md          -- roteiro do vídeo de demonstração
-```
+
 
 ## Como rodar
 
