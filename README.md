@@ -19,28 +19,22 @@ sql/
 backend/
 ├── processar_metricas.py     -- calcula as métricas e grava em analytics.*
 ├── requirements.txt
-└── .env.example              -- copie para .env e configure sua conexão
+└── .env.example             
 data/
 └── gerar_dados.py            -- gera o script 02_inserir_dados.sql
 dashboard/
-├── BI.pbix                   -- dashboard Power BI
+├── Nala Beauty BI.pbix       -- dashboard Power BI
 └── logo_nala_beauty.png
 
 
 ## Como rodar
 
-1. **Banco de dados**: rode `sql/01_criar_tabelas.sql` e depois
-   `sql/02_inserir_dados.sql` no SQL Server (SSMS ou Azure Data Studio).
+1. **Banco de dados**:
+   Foi executado a criação do script `sql/01_criar_tabelas.sql` e depois `sql/02_inserir_dados.sql` no SQL Server.
 2. **Back-end**:
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   cp .env.example .env    # preencha com os dados da sua instância
-   python processar_metricas.py
+   Refinamento e tratamentos dos dados do ecommerce para visualizar as metrícas de vendas utilizando python.  
+   processar_metricas.py
    ```
-3. **Dashboard**: abra `dashboard/BI.pbix` no Power BI Desktop e atualize os
-   dados (ele já está configurado para ler do schema `analytics`).
-
 ## Métricas calculadas (schema `analytics`)
 - `FaturamentoMensal` — faturamento por mês
 - `FaturamentoPorCategoria` — faturamento por categoria de produto
@@ -48,3 +42,8 @@ dashboard/
 - `TicketMedioPorCliente` — ticket médio e qtd. de pedidos por cliente
 - `PedidosPorStatus` — quantidade de pedidos por status
 - `ClientesRecorrentes` — top 10 clientes com 2+ pedidos
+
+3. **Dashboard**:
+   Painel criado para acompanhamento e monitoramento das vendas:
+   <img width="1317" height="737" alt="image" src="https://github.com/user-attachments/assets/168e2217-3f96-4585-9b61-ba1a05195723" />
+
