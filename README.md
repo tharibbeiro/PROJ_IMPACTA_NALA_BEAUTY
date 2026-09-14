@@ -13,15 +13,15 @@ SQL Server (dbo.*)  →  Python (backend/processar_metricas.py)  →  SQL Server
 ## Estrutura
 
 ```
-sql/
-├── 01_criar_tabelas.sql      -- cria o banco Ecommerce_Nala_Beauty e as tabelas
-└── 02_inserir_dados.sql      -- popula com dados fictícios
+sql server/
+├── 01_criar_tabelas.sql      
+└── 02_inserir_dados.sql      
 backend/
-├── processar_metricas.py     -- calcula as métricas e grava em analytics.*
+├── processar_metricas.py     
 ├── requirements.txt
 └── .env.example             
 data/
-└── gerar_dados.py            -- gera o script 02_inserir_dados.sql
+└── gerar_dados.py            
 dashboard/
 ├── Nala Beauty BI.pbix       -- dashboard Power BI
 └── logo_nala_beauty.png
@@ -30,9 +30,9 @@ dashboard/
 ## Como rodar
 
 1. **Banco de dados**:
-   Foi executado a criação do script `sql/01_criar_tabelas.sql` e depois `sql/02_inserir_dados.sql` no SQL Server.
+   Foi criado o banco de dados Ecommerce_Nala_Beauty, executado o script `sql/01_criar_tabelas.sql` que criou as tabelas bases e depois foi executado `sql/02_inserir_dados.sql` que inseriu os dados fícticios.
 2. **Back-end**:
-   Refinamento e tratamentos dos dados do ecommerce para visualizar as metrícas de vendas utilizando python.  
+   Refinamento e tratamentos dos dados do ecommerce para calcular as metrícas de vendas utilizando python, e gravando nos schemas `analytics`.  
    processar_metricas.py
    ```
 ## Métricas calculadas (schema `analytics`)
@@ -44,6 +44,8 @@ dashboard/
 - `ClientesRecorrentes` — top 10 clientes com 2+ pedidos
 
 3. **Dashboard**:
-   Painel criado para acompanhamento e monitoramento das vendas:
+   
+   Painel foi criado utilizando as métricas cálculadas, e o resultado final ficou dessa forma, para que possa ser feito acompanhamento e monitoramento das vendas:
+   
    <img width="1317" height="737" alt="image" src="https://github.com/user-attachments/assets/168e2217-3f96-4585-9b61-ba1a05195723" />
 
